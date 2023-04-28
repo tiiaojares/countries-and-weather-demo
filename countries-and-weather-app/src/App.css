@@ -1,0 +1,171 @@
+
+
+html {
+    background-image: url('C:\Users\Tiia\Documents\training\countries-and-weather-demo\countries-and-weather-app\src\images\backroundpicture.jpg');
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*  Filter-kentän muotoilu   */
+
+.filteringDiv {
+    background-color: #cccccc;
+    opacity: 95%;
+    height: 100px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filterText {
+    margin-right: 10px;
+    font-size: 24px;
+}
+.filterInput {
+    padding: 9px;
+    border-radius: 9px;
+    border-color: rgb(206, 203, 203);
+    font-size: 18px;
+}
+
+/*  infoteksti, jos liikaa hakuosumia / ei yhtään osumaa   */
+
+.infoText {
+    background-color: #cccccc;
+    opacity: 95%;
+    height: 50px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+/*  lista maista, kun hakuehdoilla löytynyt 2-10 osumaa */
+
+.countriesNameList {
+    background-color: #cccccc;
+    opacity: 95%;
+    height: 60px;
+    margin-left: 2%;
+    width: 40%;
+    display: flex;
+    align-items: center;  
+    justify-content: space-between;
+}
+.countryName {
+    font-size: 22px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#showDetailButton {
+    border-radius: 4px;
+    padding: 10px 20px 10px 20px;
+    margin-right: 20px;
+    font-size: 15px;
+    
+}
+#showDetailButton:hover {
+    font-weight: bold; 
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/*  yksittäisen maan tiedot:   */
+
+.informationTable {
+
+
+    
+    position:relative;
+    background-color: #cccccc;
+    opacity: 95%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    border-radius: 7px;
+    padding: 20px 20px 50px 20px;
+    min-height: 600px;
+}
+
+#countryNameHeader {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.column1 {
+    float: left;
+    width: 30%;
+    text-align: left;
+    margin-left: 20%;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .column2 {
+    float:right;
+    width: 30%;
+    text-align: left;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    margin-bottom: 40px;
+  }
+.informationText {
+    font-size: 25px;
+    margin-top: 0px;
+  }
+
+#goBackToListButton {
+    border-radius: 4px;
+    padding: 10px 15px 10px 15px;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#goBackToListButton:hover {
+    font-weight: bold; 
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+img {
+    margin-bottom: 25px;
+}
+
+
+/* weather-infon muotoilu   */
+.weatherInformation {
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+.weatherInformation > .informationText {
+    margin-bottom: 0px;
+    margin-top: 25px;
+}
+.column2_1 {
+    float: left;
+    width: 35%;
+}
+.column2_2 {
+    margin-top: 10px;
+    float: right;
+    width: 65%;
+    position: relative;
+}
+#iconImg {
+    position: absolute;
+    width: 8%;
+
+}
