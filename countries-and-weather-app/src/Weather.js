@@ -29,13 +29,22 @@ const Weather = ({country}) => {
         <div 
             key={country.name.official} 
             className="weatherInformation"> 
-                <p className="informationText"> Weather in {capital}: </p>
-                <div className="column2_1">
-                    <img id="iconImg" src={iconUrl} />
+                <p className="informationText"> 
+                    Weather in {capital}: 
+                </p>
+                <div className="container">
+                <div className="row">
+                    <div className="col-sm-4">
+                        <img 
+                            id="iconImg" 
+                            src={iconUrl} 
+                        />
+                    </div>
+                    <div className="col-sm-8 weatherInfoText">
+                        <p> Temperature: {weather.main.temp}{astemerkki}C </p>
+                        <p> Wind: {weather.wind.speed} m/s </p>
+                    </div>
                 </div>
-                <div className="column2_2">
-                    <p> Temperature: {weather.main.temp}{astemerkki}C </p>
-                    <p> Wind: {weather.wind.speed} m/s </p>
                 </div>
         </div>
     )

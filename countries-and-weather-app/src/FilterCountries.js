@@ -1,4 +1,7 @@
 
+
+
+
 const FilterCountries = ({filterInput, setFilter }) => {
 
     const filterWith = (event) => {
@@ -6,8 +9,9 @@ const FilterCountries = ({filterInput, setFilter }) => {
       }
 
     return(
-        <div className="filteringDiv">
-            <p className="filterText"> 
+        <div className="filteringDiv container-fluid row">
+            <div >
+            <p className="filterText" > 
                 Find countries: 
             </p>
             <input 
@@ -15,8 +19,9 @@ const FilterCountries = ({filterInput, setFilter }) => {
                 type="text" 
                 value={filterInput} 
                 onChange={filterWith} 
-            />
-      </div>
+            />    
+            </div>
+        </div>
     )
 }
 

@@ -2,6 +2,7 @@ import { Weather } from './Weather';
 import { useState } from 'react';
 import React from 'react';
 import { MapIcon } from './images/MapIcon';
+import { BackIcon } from './images/BackIcon';
 
 
 const ListOfCountries = ({countries, filterInput }) => {
@@ -67,11 +68,10 @@ const ListOfCountries = ({countries, filterInput }) => {
       <li key={c}> {theCountry.currencies[c].name}, {theCountry.currencies[c].symbol} </li>
     )
 
- 
     const getMapUrl = () => {
       const mapUrl = theCountry.maps.googleMaps;
       console.log("klikattu ", mapUrl)
-      return mapUrl;
+      window.open(mapUrl, "_blank");
     }
 
     return (
@@ -81,8 +81,8 @@ const ListOfCountries = ({countries, filterInput }) => {
           <p id="countryNameHeader"> 
             {theCountry.name.common} 
           </p>
-          <div>
-            <div className="column1">
+          <div className="row column-container">
+            <div className="col-6 column1">
               <p className="informationText"> Information: </p>
               <p> Region: {theCountry.region} </p>
               <p> Capital: {theCountry.capital[0]} </p>
@@ -91,29 +91,32 @@ const ListOfCountries = ({countries, filterInput }) => {
               <p> Languages: {language} </p>
               <p> Timezone: {theCountry.timezones[0]} </p>
               <p> Currencies: {currency} </p>
-              <a href={getMapUrl()} target="_blank"
-                >Go to Google Maps <MapIcon /> 
-              </a>
-              <div>
-              {foundCountries.length == 1 ?
-                <div />
-                :
-                <button 
-                  id="goBackToListButton"
-                  onClick={() => showAll()}> 
-                  Go back to list
-                </button>
-              }
-              </div>
             </div>
-            <div className="column2">
+            <div className="col-6 column2">
               <img src={theCountry.flags.png}  />
               <div>
                 <Weather country={theCountry} />
               </div>
+              
+              <button 
+                id="goToGoogleButton"
+                onClick={() =>getMapUrl()} >
+                Go to Google Maps <MapIcon />
+              </button>
+              <div>
+              {foundCountries.length == 1 ?
+                <div />
+                :
+              <button 
+                id="goBackToListButton"
+                onClick={() => showAll()}> 
+                Go back to list <BackIcon />
+              </button>
+              }
+              </div>
             </div>
           </div>      
-           
+          
       </div>
     )
   }

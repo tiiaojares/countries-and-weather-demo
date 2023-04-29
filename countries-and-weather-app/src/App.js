@@ -1,26 +1,28 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import axios from 'axios';
 import { ListOfCountries } from './ListOfCountries';
 import { FilterCountries } from './FilterCountries';
-import {HashRouter as Router} from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+
+import axios from 'axios';
 
 
-function App() {
+
+const App = () => {
   const[countries, setCountries] = useState([]);
   const [filterInput, setFilter] = useState('');
+  const baseUrl = '/countries'
 
   useEffect(() => {
-    axios.get('https://restcountries.com/v3.1/all')
+    const request = axios.get(baseUrl)
     .then(response => {
       setCountries(response.data)
+      console.log(response.data)
     })
     
-  }, []);
+  }, []); 
 
   return (
-      <div className="App">
+      <div className="App">   
         <FilterCountries filterInput={filterInput} setFilter={setFilter} />
         <div>
         <ListOfCountries countries={countries} filterInput={filterInput} />
@@ -28,7 +30,6 @@ function App() {
       </div>
   );
 }
-
 
 export default App;
 
