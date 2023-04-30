@@ -109,7 +109,7 @@ html {
         opacity: 0.95;
         margin-bottom: 2%;
         border-radius: 7px;
-        padding: 20px 20px 50px 20px;
+        padding: 20px 20px 20px 20px;
     }
     
     #countryNameHeader {
@@ -127,12 +127,34 @@ html {
         margin-bottom: 40px;
         padding-left: 20%;
     }
-    #goBackToListButton {
+   
+  
+
+    .buttons {
+        float: right;
+        margin-top: 60px;
+        margin-right: 20px;
+    }
+    #goToGoogleButton {
+        width: 100%;
         border-radius: 4px;
         padding: 10px 15px 10px 15px;
-        font-size: 16px;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin: 1vw; 
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+    #goToGoogleButton:hover {
+        font-weight: bold; 
+        cursor: pointer;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    #goBackToListButton {
+        width: 100%;
+        border-radius: 4px;
+        padding: 10px 15px 10px 15px;
+        margin: 1vw; 
+        font-size: 1rem;   
+        margin-top: 5px;   
     }
     #goBackToListButton:hover {
         font-weight: bold; 
@@ -145,8 +167,8 @@ html {
         text-align: left;
         padding-top: 10px;
         padding-left: 20%;
-        padding-bottom: 50px;
-        margin-bottom: 40px;
+
+
     }
     img {
         max-width: 100%;
@@ -161,6 +183,7 @@ html {
     #iconImg {
         position: absolute;
         width: 100%;
+        margin-bottom: 0;
     }
     .weatherInfoText {
         margin-top: 50px;
@@ -287,7 +310,6 @@ html {
         
     }
  }
-
 
 
 /*  yksittäisen maan tiedot:   */

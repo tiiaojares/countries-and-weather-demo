@@ -97,7 +97,7 @@ const ListOfCountries = ({countries, filterInput }) => {
               <div>
                 <Weather country={theCountry} />
               </div>
-              
+              <div className="buttons">
               <button 
                 id="goToGoogleButton"
                 onClick={() =>getMapUrl()} >
@@ -113,6 +113,7 @@ const ListOfCountries = ({countries, filterInput }) => {
                 Go back to list <BackIcon />
               </button>
               }
+              </div>
               </div>
             </div>
           </div>      
