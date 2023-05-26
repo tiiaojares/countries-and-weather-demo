@@ -1,5 +1,7 @@
-# countries-and-weather-demo  
-Welcome to my application, which allows you to search for information about any country in the world. With my app, you can find basic information about a country, such as its population, language, and currency, as well as the current weather in its capital city.
+# Countries and weather -demo  
+Welcome to my application, which allows you to search for information about any country in the world. With my app, you can find basic information about a country, such as its population, language, and currency, as well as the current weather in its capital city.  
+
+<img width="947" alt="countries" src="https://github.com/tiiaojares/countries-and-weather-demo/assets/123379881/b26bf043-5fea-4ba2-8e4a-645ee54c8e07">  
 
 My application is built using a Node.js backend with Express and Axios for API requests, and a frontend built with React, JavaScript, HTML, CSS, and Bootstrap. The app is responsive and can be used on both desktop and mobile devices.
 
